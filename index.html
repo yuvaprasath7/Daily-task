@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Elements</title>
+</head>
+
+<body onclick="myFunction()">
+    <!-- <input type="text" value="An input field">
+    <button>A Button</button>
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+    <label for="fname">First name:</label> -->
+
+    <!-- adoptnode -->
+    <!-- <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe> -->
+
+    <!-- <iframe id="myFrame" src="https://www.w3schools.com/default.asp" style="height:380px;width:520px;"></iframe> -->
+    <!-- <button onclick="adoptnode()">Try it</button> -->
+
+    <!-- characterSet -->
+    <!-- <h1>The Document Object</h1>
+    <h2>The activeElement Property</h2> -->
+
+    <!-- <p>Cookies associated with this document:</p> -->
+    <p id="demo"></p>
+    <!-- open close  -->
+    <!-- <button onclick="openclose()">Open</button> -->
+
+    <!-- create element -->
+    <!-- <div id="myDIV" style="padding:16px;background-color:lightgray"></div> -->
+
+    <!-- images -->
+    <!-- <img src="./images/Ljubicasti-klematis.jpg" alt="flower" width="150" height="120">
+    <img src="./images/Klematis_ukendt_stor.jpg" alt="flower" width="150" height="120"> -->
+
+    <!-- embed -->
+    <!-- <embed type="image/jpg" src="./images/Klematis_ukendt_stor.jpg">
+    <embed type="image/jpg" src="./images/Ljubicasti-klematis.jpg"> -->
+
+    <!-- links -->
+    <!-- <p><a href="/html/default.asp">HTML Tutorial</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p> -->
+
+    <!-- querySelector and querySelectorAll---------- -->
+    <!-- <p class="example">I am a paragraph.</p>
+    <p class="example">I am a paragraph.</p>  -->
+
+    <!-- removeHandler -->
+    <!-- <button onclick="removeHandler()">Remove</button> -->
+    
+    <!-- write and writeln -->
+    <!-- <p>It makes no sense to use writeln() in HTML.</p>
+    <p>Carriage return (CR) is ignored in HTML.</p> -->
+    <script src="/index.js"></script>
+    <!-- <script src="/index.js"></script>
+    <script src="/index.js"></script>
+    <script src="/index.js"></script> -->
+    <p id="replace">The item counter is helper text that displays under an input to notify the user of how many characters have been entered out of the total that the input will accept</p>
+</body>
+<script>
+let str = document.getElementById("replace").innerHTML; 
+let res = str.replace(/a/g, "b");
+document.getElementById("replace").innerHTML = res;
+</script>
+</html>
