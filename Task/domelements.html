@@ -1,0 +1,76 @@
+<html>
+
+<body>
+    <script>
+        document.body.style.backgroundImage = "url('./../images/w-qjCHPZbeXCQ-unsplash.jpg')";
+        var a = document.createElement("button")
+        a.innerHTML = "Add";
+
+        document.body.appendChild(a).onclick = function () {
+            var x = document.createElement("input");
+            document.body.appendChild(x).onkeypress = function (evt) {
+                var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                    return false;
+                return true;
+            };
+            x.setAttribute("id", "Inputone");
+
+            var y = document.createElement("input");
+            document.body.appendChild(y).onkeypress = function (evt) {
+                var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+                if (ASCIICode > 31 && (ASCIICode < 42 || ASCIICode > 47))
+                    return false;
+                return true;
+            };
+            y.setAttribute("id", "operator");
+
+            var z = document.createElement("input");
+            document.body.appendChild(z).onkeypress = function (evt) {
+                var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                    return false;
+                return true;
+            };
+            z.setAttribute("id", "Inputthree");
+
+            var b = document.createElement("button")
+            b.innerHTML = "Submit";
+            document.body.appendChild(b).onclick = function () {
+                var Inputone = document.getElementById('Inputone').value;
+                var operator = document.getElementById('operator').value;
+                var Inputthrees = document.getElementById('Inputthree').value;
+
+                let result;
+                switch (operator) {
+                    case "+":
+                        result = Inputone + Inputthrees;
+                        document.getElementById('results').value = `${result}`;
+                        break;
+                    case "-":
+                        result = Inputone - Inputthrees;
+                        document.getElementById('results').value = `${result}`;
+                        break;
+                    case "*":
+                        result = Inputone * Inputthrees;
+                        document.getElementById('results').value = `${result}`;
+                        break;
+                    case "%":
+                        result = Inputone % Inputthrees;
+                        document.getElementById('results').value = `${result}`;
+                        break;
+                }
+            };
+            var c = document.createElement("button")
+            c.innerHTML = "Clear";
+            document.body.appendChild(c);
+
+            var r = document.createElement("input");
+            document.body.appendChild(r);
+            r.setAttribute("id", "results");
+
+        }
+    </script>
+</body>
+
+</html>
