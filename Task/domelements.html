@@ -4,10 +4,28 @@
     <script>
         document.body.style.backgroundImage = "url('./../images/w-qjCHPZbeXCQ-unsplash.jpg')";
         var a = document.createElement("button")
+        a.setAttribute("id", "adbtn")
         a.innerHTML = "Add";
-
+        a.style.display = "block"
+        a.style.padding = '8px';
+        a.style.color = "white"
+        a.style.background = "#1C5497"
+        a.style.border = "none"
+        a.style.width = "80px"
         document.body.appendChild(a).onclick = function () {
+            var T = document.getElementById("adbtn");
+            T.style.display = "none";
+            const flabel =document.createElement("p")
+            flabel.setAttribute('id','label')
+            flabel.innerHTML="Enter the number"
+            document.body.appendChild(flabel);
+
             var x = document.createElement("input");
+            x.placeholder = "Enter First Number"
+            x.innerHTML = "Number One"
+            x.style.display = "block"
+            x.style.padding = "4px";
+            x.style.margin = "3px"
             document.body.appendChild(x).onkeypress = function (evt) {
                 var ASCIICode = (evt.which) ? evt.which : evt.keyCode
                 if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
@@ -15,8 +33,15 @@
                 return true;
             };
             x.setAttribute("id", "Inputone");
-
+            const mlabel =document.createElement("p")
+            mlabel.setAttribute('id','secondlabel')
+            mlabel.innerHTML="Enter  oerator"
+            document.body.appendChild(mlabel);
             var y = document.createElement("input");
+            y.placeholder = "Enter the Operator"
+            y.style.display = "block"
+            y.style.padding = "4px";
+            y.style.margin = "3px"
             document.body.appendChild(y).onkeypress = function (evt) {
                 var ASCIICode = (evt.which) ? evt.which : evt.keyCode
                 if (ASCIICode > 31 && (ASCIICode < 42 || ASCIICode > 47))
@@ -24,8 +49,15 @@
                 return true;
             };
             y.setAttribute("id", "operator");
-
+            const tlabel =document.createElement("p")
+            tlabel.setAttribute('id','tlabel')
+            tlabel.innerHTML="Enter Number"
+            document.body.appendChild(tlabel);
             var z = document.createElement("input");
+            z.placeholder = "Enter Second Number"
+            z.style.display = "block"
+            z.style.padding = "4px";
+            z.style.margin = "3px"
             document.body.appendChild(z).onkeypress = function (evt) {
                 var ASCIICode = (evt.which) ? evt.which : evt.keyCode
                 if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
@@ -33,14 +65,19 @@
                 return true;
             };
             z.setAttribute("id", "Inputthree");
-
             var b = document.createElement("button")
             b.innerHTML = "Submit";
+            b.style.color = "white"
+            b.style.background = "#1C5497"
+            b.style.border = "none"
+            b.style.width = "70px"
+            b.style.padding = "4px";
+            b.style.margin = "3px"
+            b.setAttribute("id", "submit");
             document.body.appendChild(b).onclick = function () {
                 var Inputone = document.getElementById('Inputone').value;
                 var operator = document.getElementById('operator').value;
                 var Inputthrees = document.getElementById('Inputthree').value;
-
                 let result;
                 switch (operator) {
                     case "+":
@@ -63,12 +100,47 @@
             };
             var c = document.createElement("button")
             c.innerHTML = "Clear";
-            document.body.appendChild(c);
+            c.style.padding = "4px";
+            c.style.margin = "3px";
+            c.style.color = "white"
+            c.style.background = "#1C5497"
+            c.style.border = "none"
+            c.style.width = "70px"
+            c.setAttribute("id", "clear");
+            document.body.appendChild(c).onclick = function () {
+                const inputs = document.querySelectorAll("input");
+                inputs.forEach(input => {
+                    input.parentNode.removeChild(input);
+                });
+                const submitbtn = document.getElementById("submit");
+                submitbtn.remove();
 
+                const clearbtn = document.getElementById("clear");
+                clearbtn.remove();
+
+                const fclear =document.getElementById("label");
+                fclear.remove();
+
+                const sclear =document.getElementById("secondlabel");
+                sclear.remove();
+
+                const tclear = document.getElementById("tlabel")
+                tclear.remove();
+
+                const lclear =document.getElementById("rlabel")
+                lclear.remove();
+            };
+            const llabel =document.createElement("p")
+            llabel.innerHTML="Result"
+            llabel.setAttribute('id','rlabel')
+            document.body.appendChild(llabel);
             var r = document.createElement("input");
+            r.placeholder = "Result"
+            r.style.display = "block"
+            r.style.padding = "4px";
+            r.style.margin = "3px"
             document.body.appendChild(r);
             r.setAttribute("id", "results");
-
         }
     </script>
 </body>
