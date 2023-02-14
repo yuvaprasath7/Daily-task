@@ -79,9 +79,10 @@
                 var operator = document.getElementById('operator').value;
                 var Inputthrees = document.getElementById('Inputthree').value;
                 let result;
+                debugger
                 switch (operator) {
                     case "+":
-                        result = Inputone + Inputthrees;
+                        result = Number(Inputone) + Number();
                         document.getElementById('results').value = `${result}`;
                         break;
                     case "-":
@@ -109,6 +110,7 @@
             c.setAttribute("id", "clear");
             document.body.appendChild(c).onclick = function () {
                 const inputs = document.querySelectorAll("input");
+                T.style.display = "block";
                 inputs.forEach(input => {
                     input.parentNode.removeChild(input);
                 });

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Values = document.createElement("input")
+        Values.setAttribute("id", "NumberInput");
+        document.body.appendChild(Values).onkeypress = function (event) {
+            var aCode = event.which ? event.which : event.keyCode;
+            if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
+            return true;
+        };
+        const Value = document.createElement("p")
+        Value.setAttribute("id", "mulTable");
+        document.body.appendChild(Value);
+        const Submit = document.createElement("button");
+        Submit.innerText = "Submit";
+        document.body.appendChild(Submit).onclick = function () {
+            var EnterNumber = document.getElementById("NumberInput").value;
+            var Multipletable = "";
+            var i = 1;
+            do {
+                for (let val = 1; val <= 10; val++) {
+                    Multipletable += i + " " + "x" + " " + val + " " + "=" + " " + val * i + "</br>";
+                }
+                i++;
+                document.getElementById("mulTable").innerHTML = Multipletable;
+            } while (i <= EnterNumber);
+        }
+    </script>
+</body>
+
+</html>
