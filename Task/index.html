@@ -2,25 +2,36 @@
 
 <body>
     <script>
-        a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        b = [];
-        c = [];
-        d = [];
-        debugger
-        for (i = 0; i < a.length; i++) {
-            b = a.length / 3;
-            c = b + b;
-            d = c + b
-            if (i < b) {
-                console.log(b)
-            }
-            else if (i > b && i < c) {
-                console.log(c)
+        // a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // b = [];
+        // c = [];
+        // d = [];
+        // debugger
+        // for (i = 0; i < a.length; i++) {
+        //     b = a.length / 3;
+        //     c = b + b;
+        //     d = c + b
+        //     if (i < b) {
+        //         console.log(b)
+        //     }
+        //     else if (i > b && i < c) {
+        //         console.log(c)
 
-            } if (i > c && i < d) {
-                console.log(d)
-            }
-        }
+        //     } if (i > c && i < d) {
+        //         console.log(d)
+        //     }
+        // }
+
+        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const thirdarray = Math.ceil(a.length / 3);
+
+        const third = a.splice(-thirdarray);
+        const second = a.splice(-thirdarray);
+        const first = a;
+        
+        console.log(first); 
+        console.log(second); 
+        console.log(third); 
     </script>
 </body>
 
