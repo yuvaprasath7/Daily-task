@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 
 <body>
     <script>
-let addBtn = document.createElement("button");
-addBtn.innerHTML = "Add";
-addBtn.style.display = " ";
+        a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        b = [];
+        c = [];
+        d = [];
+        debugger
+        for (i = 0; i < a.length; i++) {
+            b = a.length / 3;
+            c = b + b;
+            d = c + b
+            if (i < b) {
+                console.log(b)
+            }
+            else if (i > b && i < c) {
+                console.log(c)
 
-let clearBtn = document.createElement("button");
-clearBtn.innerHTML = "Clear";
-
-document.body.appendChild(addBtn);
-document.body.appendChild(clearBtn);
-
-addBtn.addEventListener("click", function() {
-  addBtn.style.display = "none";
-});
-
-clearBtn.addEventListener("click", function() {
-  addBtn.style.display = "block";
-});
-
+            } if (i > c && i < d) {
+                console.log(d)
+            }
+        }
     </script>
 </body>
 

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
         const Values = document.createElement("input")
@@ -17,9 +15,9 @@
             if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
             return true;
         };
-        const Value = document.createElement("p")
-        Value.setAttribute("id", "mulTable");
-        document.body.appendChild(Value);
+        const Valuess = document.createElement("p")
+        Valuess.setAttribute("id", "mulTable");
+        document.body.appendChild(Valuess);
         const Submit = document.createElement("button");
         Submit.innerText = "Submit";
         document.body.appendChild(Submit).onclick = function () {
@@ -34,7 +32,11 @@
                 document.getElementById("mulTable").innerHTML = Multipletable;
             } while (i <= EnterNumber);
         }
+//         else if (i > b && i < c) {
+
+// } if (i > c && i < d) {
+
+// }
     </script>
 </body>
-
 </html>

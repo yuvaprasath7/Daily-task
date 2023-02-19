@@ -82,19 +82,19 @@
                 debugger
                 switch (operator) {
                     case "+":
-                        result = Number(Inputone) + Number();
+                        result = Number(Inputone) + Number(Inputthrees);
                         document.getElementById('results').value = `${result}`;
                         break;
                     case "-":
-                        result = Inputone - Inputthrees;
+                        result = Number(Inputone) - Number(Inputthrees);
                         document.getElementById('results').value = `${result}`;
                         break;
                     case "*":
-                        result = Inputone * Inputthrees;
+                        result = Number(Inputone) * Number(Inputthrees);
                         document.getElementById('results').value = `${result}`;
                         break;
                     case "%":
-                        result = Inputone % Inputthrees;
+                        result = Number(Inputone) % Number(Inputthrees);
                         document.getElementById('results').value = `${result}`;
                         break;
                 }
